@@ -18,7 +18,7 @@ paddle_a.shape("square")
 paddle_a.color("white")
 paddle_a.shapesize(stretch_wid=5,stretch_len=1)
 paddle_a.penup()
-paddle_a.goto(-380, 0)
+paddle_a.goto(-350, 0)
 
 # Paddle B
 paddle_b = turtle.Turtle()
@@ -27,7 +27,7 @@ paddle_b.shape("square")
 paddle_b.color("white")
 paddle_b.shapesize(stretch_wid=5,stretch_len=1)
 paddle_b.penup()
-paddle_b.goto(380, 0)
+paddle_b.goto(350, 0)
 
 # Ball
 ball = turtle.Turtle()
@@ -99,14 +99,14 @@ while True:
         os.system("afplay bounce.wav&")
 
     # Left and right
-    if ball.xcor() > 320:
+    if ball.xcor() > 350:
         score_a += 1
         pen.clear()
         pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
         ball.goto(0, 0)
         ball.dx *= -1
 
-    elif ball.xcor() < -320:
+    elif ball.xcor() < -350:
         score_b += 1
         pen.clear()
         pen.write("Player A: {}  Player B: {}".format(score_a, score_b), align="center", font=("Courier", 24, "normal"))
